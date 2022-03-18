@@ -1,0 +1,209 @@
+.footer{
+    background-color: $color-gray-dark-3;
+    padding: 4rem 0 2rem 0;
+    font-size: 1.4rem;
+    color: $color-gray-light-1;
+
+    @include respond(tablet-port){
+       padding: 6rem 0 2rem 0;
+    }
+
+    @include respond(phone){
+        padding: 0rem 0 2rem 0;
+     }
+
+    &__logo-box{
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        
+        @include respond(phone){
+            width: 100%;
+            order: 1;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        
+        @include respond(phone){
+            flex-wrap: wrap;
+        }
+    }
+
+    &__quicklinks{
+     
+        display: flex;
+        flex-direction: column; 
+        width: 25%;
+
+        @include respond(phone){
+            width: 50%;
+            order: 2;
+           
+        }
+
+        h3{
+           color: white;
+           font-size: 2.4rem;
+           font-weight: 700;
+           margin-bottom: 1.6rem;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            list-style: none;
+
+            li{
+
+                a{
+                    text-decoration: none;
+                    color: #888;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    transition: all 200ms;
+                }
+
+                a:hover{
+                    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+
+            }
+        }
+    }
+
+    &__sitemap{
+        width: 25%;
+        display: flex;
+        flex-direction: column; 
+
+        @include respond(phone){
+            width: 50%;
+            order: 2;
+           
+        }
+
+        h3{
+            color: white;
+            font-size: 2.4rem;
+            font-weight: 700;
+            text-align: right;
+            margin-bottom: 1.6rem;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            text-align: right;
+            list-style: none;
+
+            li{
+                
+                a{
+                    text-decoration: none;
+                    color: #888;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                   
+                    transition: all 200ms;
+                }
+
+                a:hover{
+                    
+                    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+
+            }
+        }
+    }
+
+    &__box{
+        border-top: 1px solid #777;;
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+        @include respond(phone){
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__left{
+            width: 50%;
+
+            @include respond(phone){
+                width: 100%;
+                text-align: center;
+            }
+           
+        }
+
+        &__right{
+            width: 50%;
+            display: flex;
+          
+            @include respond(phone){
+                width: 100%;
+            }
+
+            &__iconbox{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                width: 100%;
+                align-items: center;
+                gap: 2rem;
+                font-size: 3.6rem;
+
+                @include respond(phone){
+                    justify-content: center;
+                }
+
+                &__link{
+                    color: #888;
+                    padding-top: 2rem;
+                    font-size: 3.6rem;
+
+                    &:hover{
+                        color: #007ff5;
+                    }
+
+                }
+                
+            }
+        }
+    }
+
+    &__logo{
+        width: 30rem;
+        height: auto;
+
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+
+    &__copyright{
+      
+        
+        width: 80%;
+        font-size: 1.8rem;
+        color: #888;
+
+        @include respond(tablet-port){
+            width: 100%;
+            font-size: 1.6rem;
+         }
+    }
+}
